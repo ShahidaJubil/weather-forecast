@@ -1,0 +1,42 @@
+.form{
+    background-image: linear-gradient(60deg,  rgb(65, 178, 244), rgb(157, 196, 218),rgb(66, 99, 183));
+    border-radius:10px;
+    margin: 10%;
+  }
+  
+  button{
+    border: 1px solid transparent;
+    padding: 10px;
+    color: white;
+    background-color: rgb(17, 47, 75);
+    border-radius: 15%;
+    margin-left: 20px !important;
+  }
+  .textfield{
+    color: white !important;
+    
+  }
+  .location-icon{
+    color: rgb(28, 70, 104);
+    font-size: 1.9rem;
+  }
+  .city{
+    color: rgb(8, 64, 124);
+    font-size: 2.2rem;
+  }
+  .temp{
+    /* padding-top: 12px; */
+    font-size: 1.5rem;
+    color: rgb(37, 53, 105)
+  }
+  .title{
+    color: rgba(247, 247, 249, 0.63);
+    margin: 4rem;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+.icon-img{width: 20rem;
+  height: 20rem;
+}
+
+  
