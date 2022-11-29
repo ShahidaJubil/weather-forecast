@@ -2,41 +2,102 @@
     background-image: linear-gradient(60deg,  rgb(65, 178, 244), rgb(157, 196, 218),rgb(66, 99, 183));
     border-radius:10px;
     margin: 10%;
+    margin-top: 0%;
   }
   
-  button{
-    border: 1px solid transparent;
+   button{
+    color: rgb(157, 196, 218)!important;
+    width: 8rem;
     padding: 10px;
-    color: white;
-    background-color: rgb(17, 47, 75);
-    border-radius: 15%;
-    margin-left: 20px !important;
+    background-color: rgb(17, 47, 75) !important;
+  } 
+  button:hover{
+    background-color: rgb(21, 20, 20) !important;
+    border: 1px solid rgb(17, 47, 75) ;
+    color:white !important;
+    font-weight: 400;
   }
   .textfield{
     color: white !important;
-    
+    margin-top: 8rem !important;
   }
   .location-icon{
-    color: rgb(28, 70, 104);
-    font-size: 1.9rem;
+    color:rgb(17, 47, 75);
+    font-size: 1.8rem;
   }
   .city{
-    color: rgb(8, 64, 124);
+    color: rgb(17, 47, 75);
     font-size: 2.2rem;
   }
   .temp{
-    /* padding-top: 12px; */
+    margin-top: -50px !important;
     font-size: 1.5rem;
     color: rgb(37, 53, 105)
   }
   .title{
     color: rgba(247, 247, 249, 0.63);
-    margin: 4rem;
+    margin: 2.7rem;
     text-align: center;
-    font-size: 1.6rem;
+
   }
-.icon-img{width: 20rem;
-  height: 20rem;
+.icon-img{width: 30rem;
+  height: 27rem;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
 }
+
+
+@media screen and (max-width:1920px) {
+  .icon-img{
+    width: 46rem;
+    height: 33rem;
+  }
+} 
+@media screen and (max-width:1600px) {
+  .icon-img{
+    width: 40rem;
+  }
+}
+@media screen and (max-width:1440px) {
+  .icon-img{
+    width: 36rem;
+  }
+}
+@media screen and (max-width:1280px) and (min-width:1028px) {
+  .icon-img{
+    width: 30rem;
+  height: 27rem;
+  }
+}
+
+
+@media screen and (max-width:1024px) {
+  .icon-img{
+    width: 25rem;
+  }
+}
+
+@media screen and (max-width:769px) {
+  .icon-img{
+    width: 18rem;
+    height: 27rem;
+  }
+}
+@media screen and (max-width:426px) {
+  .icon-img{
+    height: 22rem;
+    border-radius:3%;
+  }
+  .textfield{
+    margin-top: 0rem !important;
+  }
+}
+
+@media screen and (max-width:321px) {
+  .icon-img{
+    width: 14rem;
+  }
+}
+
 
   

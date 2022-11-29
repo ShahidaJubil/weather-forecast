@@ -18,6 +18,8 @@ const Item = styled(Paper)(({ theme }) => ({
     textAlign: 'center',
     color: theme.palette.text.secondary,
     boxShadow:'none'
+
+    
   }));
 
 
@@ -30,7 +32,7 @@ function Weather() {
 
   const getWeatherDetails = (cityName) => {
     if (!cityName) return
-    const apiURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + apiKey
+    const apiURL = "https://api.openweathermap.org/data/2.5/weather?q="+ cityName +"&APPID="+ apiKey
     axios.get(apiURL).then((res) => {
       console.log("response", res.data)
       setData(res.data)
@@ -51,31 +53,35 @@ function Weather() {
 
   return (
     <div>
-        <h2 className='title'>Weather Today</h2>
-        <Grid container item lg={11}>
+        <h1 className='title'>Weather Today</h1>
+        <Grid container item lg={12}>
 
-      <div className='form'>     
-        <Grid container spacing={0}>
-          <Grid item xl={6} lg={6} sm={10}xs={11}>
-              <Item>
+         
+    <Grid container spacing={0} lg={12} className='form'>
+        <Grid item xl={6} lg={6} sm={6} xs={12}>
+                <Item >
+                    <img src={image} alt='' className='icon-img'/>
+                </Item>
+        </Grid> 
+        <Grid item xl={6} lg={6} sm={6}xs={12}>
+              <Item lg={12}>
 
                 <TextField id="outlined-search"  
                   className='textfield' size="small"
                   label="Search your city" type="search" 
                   value={inputCity} onChange={handleChangeInput}/>
+              </Item>    
+                <Item lg={12}>
+  
                 <Button  type='button' onClick={handleSearch} variant="contained">Search</Button>
               
-                  <h5 className="city"><MdLocationOn className='location-icon'/>{data?.name}</h5>
+                  <h5 className="city" ><MdLocationOn className='location-icon'/>{data?.name}</h5>
                   <h6 className="temp">{((data?.main?.temp) - 273.15).toFixed(2)}°C</h6>
               </Item>
           </Grid>
-          <Grid item lg={6}>
-                <Item>
-                    <img src={image} alt='' className='icon-img'/>
-                </Item>
-          </Grid> 
+          
         </Grid>
-      </div>
+   
       </Grid>
     </div>
   )
